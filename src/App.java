@@ -16,10 +16,10 @@ public class App {
     static void getuserInput() {
         //create a scanner object
         Scanner pali = new Scanner(System.in);
-    System.out.println("please enter a string, and we will check if its a palindrome for you.");
-
-
+        System.out.println("please enter a string, and we will check if its a palindrome for you.");
         String UserTyped=pali.nextLine();
+        //convert all user input to upper case
+         UserTyped= UserTyped.toUpperCase();
         //convert user input to char array
         char UserInputChar[]=UserTyped.toCharArray();
         int size=UserTyped.length();
