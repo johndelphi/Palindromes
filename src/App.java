@@ -12,11 +12,18 @@ should
 be a boolean-returning method called isPalindrome.
 The program package should be called palindromes.*/
 public class App {
-    /*The getuserImput gets the a string from user*/
+    /*The getuserImput gets the a string from user 
+     *After getting the string from the user
+     *After getting the user input it copies the reversed contents to
+     *the char array then sets the length of the string.then loops through its content checking if the orignal 
+     *match the reversed string
+
+     */
     static void getuserInput() {
         //create a scanner object
         Scanner pali = new Scanner(System.in);
         System.out.println("please enter a string, and we will check if its a palindrome for you.");
+        //getting user type string from  console
         String UserTyped=pali.nextLine();
         //convert all user input to upper case
          UserTyped= UserTyped.toUpperCase();
