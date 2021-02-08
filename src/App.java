@@ -13,9 +13,13 @@ be a boolean-returning method called isPalindrome.
 The program package should be called palindromes.*/
 public class App {
     /*The getuserImput gets the a string from user*/
-    static char[] getuserInput() {
+    static void getuserInput() {
+        //create a scanner object
+        Scanner pali = new Scanner(System.in);
+    System.out.println("please enter a string, and we will check if its a palindrome for you.");
 
-        String UserTyped="eve";
+
+        String UserTyped=pali.nextLine();
         //convert user input to char array
         char UserInputChar[]=UserTyped.toCharArray();
         int size=UserTyped.length();
@@ -25,23 +29,29 @@ public class App {
             reversedUserInput[size-1-i]=UserInputChar[i];
             ++i;   
         }
+        i=0;
+        while(i!=size){
+            if (UserInputChar[i]!=reversedUserInput[i]) {
+                System.out.println(UserTyped +" is not palindrome");
+                System.exit(0);
+                
+            }
+            else{
+                ++i;
+                continue;
+            }
+        }
         
-        System.out.println("Please enter a word, we will check if its a palindrome");
-        System.out.println(UserTyped );
-        System.out.println(reversedUserInput);
-    
-        return reversedUserInput;
+        System.out.println(UserTyped +  " is a palindrome " );
+
+
        
     }
     
 	public static void main(String[] args) throws Exception {
-      /*
-       *call the input method  */ 
+      //calling a method that gets user input and checks weither what user enters is palindrome
 
 getuserInput();
-
-
-
 
     
 }
