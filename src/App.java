@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 /*
-Name  john muema michael
-Course  cosc 2436 2801
+Name: john muema michael
+Course cosc 2436 2801
 Date 2/7/2020
 
 Assignment Description 
@@ -13,29 +13,32 @@ be a boolean-returning method called isPalindrome.
 The program package should be called palindromes.*/
 public class App {
     /*The getuserImput gets the a string from user*/
-    static String getuserImput() {
+    static char[] getuserInput() {
 
-        String UserTyped="trick";
+        String UserTyped="eve";
+        //convert user input to char array
+        char UserInputChar[]=UserTyped.toCharArray();
+        int size=UserTyped.length();
+        char reversedUserInput[]=new char[size];
+        int i=0;
+        while (i!=size) { 
+            reversedUserInput[size-1-i]=UserInputChar[i];
+            ++i;   
+        }
         
-        int stringlength=UserTyped.length();
+        System.out.println("Please enter a word, we will check if its a palindrome");
+        System.out.println(UserTyped );
+        System.out.println(reversedUserInput);
     
-        /*extract the data from @ userTyped to 
-        a character array called reversedUserImput*/
-        char reversedUserImput[stringlength]=UserTyped.toCharArray();
-
-
-        System.out.println("Please enter a word, we will check if its a palindrme");
-
-        return UserTyped;
+        return reversedUserInput;
        
     }
     
-
-	
 	public static void main(String[] args) throws Exception {
-       // Create an array of strings to test.
+      /*
+       *call the input method  */ 
 
-getuserImput();
+getuserInput();
 
 
 
